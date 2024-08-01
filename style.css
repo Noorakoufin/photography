@@ -807,7 +807,55 @@ section p#glide {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.girl-image ,
+.gallery-item {
+    animation: scaleup both;
+    animation-timeline: view(70% 30%);
+}
 
+@keyframes scaleup {
+
+    from {
+        transform: translateY(50px);
+        clip-path: inset(0 42% 0 59%);
+    }
+
+    to {
+        transform: translateY(0px);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.animation {
+    animation: scaleup both;
+    animation-timeline: view(90% 5%);
+}
+
+@keyframes scaleup {
+    from {
+        transform: translateY(200px) scale(0.3);
+    }
+
+    to {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.gallery-masonry-item {
+    animation: fadein both;
+    animation-timeline: view(80% 25%);
+}
+
+@keyframes fadein {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @media screen and (max-width:1925px) and (min-width:1400px) {
     .popup:has(input[type="checkbox"]:checked) .popup-content {

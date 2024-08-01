@@ -627,7 +627,37 @@ p#copy {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.animation {
+    animation: scaleup both;
+    animation-timeline: view(75% 5%);
+}
 
+@keyframes scaleup {
+    from {
+        transform: translateY(200px) scale(0.3);
+    }
+
+    to {
+        transform: translateY(0px) scale(1);
+    }
+}
+.team-image1 {
+    animation: scaleup both;
+    animation-timeline: view(70% 30%);
+}
+
+@keyframes scaleup {
+
+    from {
+        transform: translateY(50px);
+        clip-path: inset(0 42% 0 59%);
+    }
+
+    to {
+        transform: translateY(0px);
+        clip-path: inset(0 0 0 0);
+    }
+}
 @media screen and (max-width:1925px) and (min-width:1400px) {
     .popup:has(input[type="checkbox"]:checked) .popup-content {
         top: clamp(9%, 15%, 9%);

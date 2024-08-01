@@ -468,7 +468,21 @@ p#copy {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.grid-container-item {
+    animation: fadein both;
+    animation-timeline: view(80% 25%);
+}
 
+@keyframes fadein {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 @media screen and (max-width:1925px) and (min-width:1400px) {
     .popup:has(input[type="checkbox"]:checked) .popup-content {
         top: clamp(9%, 15%, 9%);

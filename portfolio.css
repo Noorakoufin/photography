@@ -193,7 +193,7 @@ input[type="checkbox"] {
 }
 
 #pop-head:hover {
-    color: #391e21;
+    color: #ffffff;
 }
 
 #pop-head span {
@@ -211,7 +211,7 @@ input[type="checkbox"] {
 
 .popup:has(input[type="checkbox"]:checked) .popup-content {
     transform: translateY(0%);
-    top: clamp(9%, 15%, 12%);
+    top: clamp(8%, 9%, 12%);
     left: 0;
 }
 
@@ -488,7 +488,11 @@ p#copy {
         top: clamp(9%, 15%, 9%);
     }
 }
-
+@media screen and (max-width:1250px) and (min-width:1200px) {
+    .popup:has(input[type="checkbox"]:checked) .popup-content {
+        top: clamp(8%, 12%, 15%);
+    }
+}
 @media screen and (max-width:1200px) {
     #pop-head {
         font-size: clamp(2vw, 6.5vw + 0.2rem, 8vw);
@@ -597,7 +601,10 @@ p#copy {
     .grid-container {
         margin-bottom: 2rem;
     }
-
+.link1
+{
+    flex-direction: column;
+}
 }
 
 @media screen and (max-width:350px) {
@@ -631,5 +638,9 @@ p#copy {
     #menu,
     .brand {
         font-size: 17px;
+    }
+    .link1 a,
+    .link2 a {
+        font-size: 0.8rem;
     }
 }

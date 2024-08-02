@@ -197,7 +197,7 @@ input[type="checkbox"] {
 }
 
 #pop-head:hover {
-    color: #391e21;
+    color: #ffffff;
 }
 
 #pop-head span {
@@ -215,7 +215,7 @@ input[type="checkbox"] {
 
 .popup:has(input[type="checkbox"]:checked) .popup-content {
     transform: translateY(0%);
-    top: clamp(9%, 15%, 12%);
+    top: clamp(8%, 9%, 12%);
     left: 0;
 }
 
@@ -343,7 +343,12 @@ figure.gallery-item.gallery-item3 {
 .girl-image {
     width: 90vw;
     margin: 0 auto;
+    height: 85vh;
+}
 
+.girl-image-class {
+    width: 100%;
+    height: 100%;
 }
 
 /* _________________social and me_________________________-___ */
@@ -505,14 +510,6 @@ figure.gallery-item.gallery-item3 {
     transform: translateX(0%);
 }
 
-/* .gallery-masonry-item img{
-    transform: scale(1);
-    transition: 0.5s ease;
-}
-.gallery-masonry-item:hover img{
-    transform: scale(1.10);
-   
-} */
 
 /* ------------------------footer section---------------------------- */
 footer {
@@ -807,7 +804,8 @@ section p#glide {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.girl-image ,
+
+.girl-image,
 .gallery-item {
     animation: scaleup both;
     animation-timeline: view(70% 30%);
@@ -863,6 +861,12 @@ section p#glide {
     }
 }
 
+@media screen and (max-width:1250px) and (min-width:1200px) {
+    .popup:has(input[type="checkbox"]:checked) .popup-content {
+        top: clamp(8%, 12%, 15%);
+    }
+}
+
 @media screen and (max-width:1200px) {
     #pop-head {
         font-size: clamp(2vw, 6.5vw + 0.2rem, 8vw);
@@ -875,10 +879,20 @@ section p#glide {
     }
 }
 
+@media screen and (max-width:1050px) {
+    .overlay {
+        display: none;
+    }
+}
+
 @media screen and (max-width:790px) {
     #gallery-text {
         font-size: clamp(1.8vw, 1.6vw + 0.2rem, 1vw);
         width: 50%;
+    }
+
+    .girl-image {
+        height: 70vh;
     }
 
     .popup2 {
@@ -964,6 +978,10 @@ section p#glide {
         gap: 1rem;
         width: 90vw;
         margin: auto;
+    }
+
+    .girl-image {
+        height: 60vh;
     }
 
     figure.gallery-item.gallery-item1 {
@@ -1086,6 +1104,10 @@ section p#glide {
         font-size: 1rem;
         margin: 1rem;
     }
+
+    .girl-image {
+        height: 55vh;
+    }
 }
 
 @media screen and (max-width:340px) {
@@ -1103,4 +1125,8 @@ section p#glide {
         font-size: clamp(19vw, 6.5vw + 0.2rem, 8vw);
     }
 
+    .link1 a,
+    .link2 a {
+        font-size: 0.8rem;
+    }
 }

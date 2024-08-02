@@ -192,7 +192,7 @@ input[type="checkbox"] {
 }
 
 #pop-head:hover {
-    color: #391e21;
+    color: #ffffff;
 }
 
 #pop-head span {
@@ -210,7 +210,7 @@ input[type="checkbox"] {
 
 .popup:has(input[type="checkbox"]:checked) .popup-content {
     transform: translateY(0%);
-    top: clamp(9%, 15%, 12%);
+    top: clamp(8%, 9%, 12%);
     left: 0;
 }
 
@@ -647,24 +647,31 @@ p#copy {
 
 #service-para {
     animation: scaleup both;
-     animation-timeline: view(70% 5%);
+    animation-timeline: view(70% 5%);
 }
 
 @keyframes scaleup {
 
     from {
-       
+
         transform: translateY(200px) scale(0.3);
     }
+
     to {
-       
-        transform:translateY(0px) scale(1);
+
+        transform: translateY(0px) scale(1);
     }
 }
 
 @media screen and (max-width:1925px) and (min-width:1400px) {
     .popup:has(input[type="checkbox"]:checked) .popup-content {
         top: clamp(9%, 15%, 9%);
+    }
+}
+
+@media screen and (max-width:1250px) and (min-width:1200px) {
+    .popup:has(input[type="checkbox"]:checked) .popup-content {
+        top: clamp(8%, 12%, 15%);
     }
 }
 
@@ -797,7 +804,6 @@ p#copy {
 
     .card-content {
         width: 100%;
-        height: 56vh;
         background-image: linear-gradient(to top, #eedccb 0%, #eed6c8 100%);
         border-radius: 0;
         padding: 1rem;
@@ -829,11 +835,11 @@ p#copy {
 
     .scroll-content {
         gap: 1rem;
+        justify-content: center;
     }
 
     .scroll-gallery {
         width: 95vw;
-        height: 105vh;
         margin: auto;
         padding: 1rem 2rem 1rem 1rem;
     }
@@ -883,6 +889,16 @@ p#copy {
     }
 }
 
+@media screen and (max-width:400px) {
+    #rotate-span {
+        font-size: 1.8rem;
+    }
+
+    .wrapper {
+        height: 62px;
+    }
+}
+
 @media screen and (max-width:350px) {
     .wrapper {
         height: 43.9px;
@@ -914,5 +930,10 @@ p#copy {
 
     .scroll-gallery {
         padding: 0.8rem;
+    }
+
+    .link1 a,
+    .link2 a {
+        font-size: 0.8rem;
     }
 }
